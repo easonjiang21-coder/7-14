@@ -1,5 +1,5 @@
 img {
-    width: 100px;
+    width: 200px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -7,11 +7,11 @@ img {
 }
 
 li { 
-    font-size: 100px; 
+    font-size: 20px; 
     color: black;
 }
 
 .background { 
-    background-color: orange;
+    background-color: white;
 }
 
