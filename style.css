@@ -1,16 +1,17 @@
-div {
-    font-size: 200px; 
-
+img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
 }
 
 li { 
     font-size: 100px; 
-    color: black
-
-
+    color: black;
 }
 
-.body { 
+.background { 
     background-color: orange;
 }
 
