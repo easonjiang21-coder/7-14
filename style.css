@@ -3,8 +3,14 @@ div {
 
 }
 
+li { 
+    font-size: 100px; 
+    color: black
 
-.body { 
+
+}
+
+.background { 
     background-color: orange
 
 
