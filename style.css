@@ -1,5 +1,9 @@
 html, body {
     background-color: white;
+    margin: 0;
+    padding: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #2c3e50;
 }
 
 img {
@@ -10,9 +14,26 @@ img {
     margin: 0 auto 1rem;
 }
 
-li { 
-    font-size: 100px; 
-    color: black;
+h1 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    color: #d35400;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin: 0.75rem auto 1.25rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12);
+    max-width: 800px;
+}
+
+ol {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 1.2rem;
+}
+
+li {
+    font-size: 1.05rem;
+    color: #2c3e50;
+    line-height: 1.7;
 }
 
 .background {
