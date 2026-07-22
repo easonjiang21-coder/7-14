@@ -1,30 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
-    background-color: white;
+    margin: 0;
+    min-height: 100%;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #faf5e8 0%, #f0d8b8 45%, #d7b98f 100%);
+    color: #2e2115;
 }
 
-img {
-    width: 200px;
-    max-width: 100%;
-    height: auto;
+body.poster {
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+.poster-card {
+    width: min(100%, 900px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 250, 236, 0.96) 100%);
+    border: 2px solid #e0c89e;
+    border-radius: 32px;
+    box-shadow: 0 28px 80px rgba(68, 45, 18, 0.25);
+    overflow: hidden;
+    position: relative;
+}
+
+.poster-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.46), transparent 35%);
+    pointer-events: none;
+}
+
+.poster-header {
+    position: relative;
+    padding: 2.2rem 2.5rem 1.5rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.poster-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.15rem;
+    border-radius: 999px;
+    background: #f8ebd1;
+    color: #9c6b31;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.poster-label::before {
+    content: "★";
+    color: #c07f1b;
+}
+
+.poster-header h1 {
+    margin: 1.1rem 0 0.4rem;
+    font-size: clamp(3.75rem, 5vw, 5.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+}
+
+.poster-header h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 2vw, 1.9rem);
+    font-weight: 600;
+    color: #7a5d3a;
+}
+
+.poster-image-wrap {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #e5c89f;
+}
+
+.poster-image-wrap img {
+    width: 100%;
     display: block;
-    margin: 0 auto 1rem;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    filter: saturate(1.05) contrast(1.02);
 }
 
-h1 {
-    font-size: 100px;
+.poster-copy {
+    position: relative;
+    padding: 2rem 2.5rem 2.5rem;
+    z-index: 1;
 }
 
-h2 {
-    font-size: 50px;
-}  
-
-
-li { 
-    font-size: 20px; 
-    color: black;
+.poster-subtitle {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    color: #5f4a2d;
+    letter-spacing: 0.01em;
 }
 
-.background {
-    background-color: white;
+ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style-position: inside;
+    counter-reset: step;
+}
+
+ol li {
+    position: relative;
+    margin-bottom: 1.35rem;
+    padding-left: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #3e2d1e;
+}
+
+ol li::before {
+    content: counter(step, decimal-leading-zero);
+    counter-increment: step;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #f6d7a4;
+    color: #6b4822;
+    font-weight: 700;
+}
+
+.poster-note {
+    margin: 1.5rem 0 0;
+    padding: 1rem 1.2rem;
+    border-radius: 18px;
+    background: #fff3db;
+    color: #6f4f2c;
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    body.poster {
+        padding: 1rem;
+    }
+
+    .poster-card {
+        border-radius: 24px;
+    }
+
+    .poster-header {
+        padding: 1.6rem 1.4rem 1rem;
+    }
+
+    .poster-copy {
+        padding: 1.6rem 1.4rem 1.8rem;
+    }
 }
 
